@@ -1,0 +1,21 @@
+mixin nav-bar(active)
+	nav.navbar.navbar-default.navbar-fixed-top
+		.container
+			.navbar-header
+				button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href='/') Atoms-to-Systems Lab
+			#navbar.navbar-collapse.collapse
+				ul.nav.navbar-nav
+					- var dict = {'/': 'Home', 'publication': 'Publication', 'about': 'About', 'contact': 'Contact'};
+					- for (var key in dict)
+						- if (active)
+							- if (active === dict[key].toLowerCase())
+								li.active
+									a(href= key)= dict[key]
+								- continue
+						li
+							a(href= key)= dict[key]
