@@ -1,0 +1,4 @@
+db/
+updates/
+node_modules/
+secret.js
