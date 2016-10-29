@@ -2,6 +2,22 @@ extends ../layouts/base
 
 block nav
 	+nav-bar("publication")
- 
+
 block content
-	h1 Publication
+	h1 Publications
+		br
+		- if (books.length > 0)
+			h3 Book Chapters
+			- for (var i in books)
+				- var book = books[i]
+				p!= book.text.html
+		- if (journals.length > 0)
+			h3 Journal Publications
+			- for (var i in journals)
+				- var journal = journals[i]
+				p!= journal.text.html
+		- if (conferences.length > 0)
+			h3 Peer-Reviewed IEEE Conference Publications
+			- for (var i in conferences)
+				- var conference = conferences[i]
+				p!= conference.text.html
