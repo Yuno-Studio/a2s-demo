@@ -3,6 +3,10 @@ body {
   padding-bottom: 30px;
 }
 
+div.title {
+	text-align: center;
+}
+
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
@@ -15,4 +19,12 @@ body {
 
 .theme-showcase .navbar .container {
   width: auto;
+}
+
+.item img {
+	margin: 0 auto;
+}
+
+.item div.carousel-caption {
+	margin: 0 auto;
 }

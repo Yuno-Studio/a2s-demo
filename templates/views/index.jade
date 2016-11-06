@@ -4,4 +4,13 @@ block nav
 	+nav-bar("home")
 
 block content
-	h1 Hello World
+
+	div(style='margin: 30px auto;')
+
+	- if (carousels !== null && carousels.length > 0)
+		+carousel('carousels', carousels)
+
+	p(style='margin: 30px auto;') The Atoms-to-Systems Laboratory conducts applied research in biological, chemical, photonic, and electronic sensors (i.e. nano + EE + bio). The laboratory is one of its kind in Hong Kong in that it integrates recent advances in nanomaterials engineering with the computation power of modern electronics to build the next-generation sensors from materials, devices, to circuits and systems. The lab also has strong ties with local and international companies. The principle investigator of the laboratory is Dr. Derek Ho.
+
+	
+	p Department of Physics and Materials Science, City University of Hong Kong

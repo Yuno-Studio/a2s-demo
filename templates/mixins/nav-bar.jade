@@ -7,10 +7,10 @@ mixin nav-bar(active)
 					span.icon-bar
 					span.icon-bar
 					span.icon-bar
-				a.navbar-brand(href='/') Atoms-to-Systems Lab
+				a.navbar-brand(href='/', style='font-size: 23px;') Atoms-to-Systems Lab
 			#navbar.navbar-collapse.collapse
-				ul.nav.navbar-nav
-					- var dict = {'/': 'Home', 'publication': 'Publication', 'about': 'About', 'contact': 'Contact'};
+				ul.nav.navbar-nav(style='font-size: 18px;')
+					- var dict = {'/': 'Home', 'publication': 'Publication', 'contact': 'Contact'};
 					- for (var key in dict)
 						- if (active)
 							- if (active === dict[key].toLowerCase())

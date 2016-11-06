@@ -32,5 +32,6 @@ exports = module.exports = function(app) {
 	
 	app.get('/', routes.views.index);
 	app.get('/publication', routes.views.publication);
+	app.get('/contact', routes.views.contact);
 
 }
