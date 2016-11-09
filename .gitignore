@@ -2,3 +2,4 @@ db/
 updates/
 node_modules/
 secret.js
+public/upload/

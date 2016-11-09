@@ -14,14 +14,14 @@ exports = module.exports = function(req, res) {
     		var result = [];
     		for (i in carousels){
     			var carousel = carousels[i];
-    			var option = {'image': carousel.image.secure_url};
+    			var option = {'image': 'upload/' + carousel.image.filename};
     			var caption = carousel.caption;
     			if (caption !== null){
     				option['p'] = caption;
     			}
     			result.push(option);
     		}
-    		console.log(JSON.stringify(result));
+            console.log(JSON.stringify(result));
     		return view.render('index', {'carousels': result});
     	});    
 }
